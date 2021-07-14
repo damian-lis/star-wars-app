@@ -2,18 +2,6 @@
     "data": {
       "films": [
         {
-          "id": "ZmlsbXM6MQ==",
-          "title": "A New Hope"
-        },
-        {
-          "id": "ZmlsbXM6Mg==",
-          "title": "The Empire Strikes Back"
-        },
-        {
-          "id": "ZmlsbXM6Mw==",
-          "title": "Return of the Jedi"
-        },
-        {
           "id": "ZmlsbXM6NA==",
           "title": "The Phantom Menace"
         },
@@ -24,6 +12,18 @@
         {
           "id": "ZmlsbXM6Ng==",
           "title": "Revenge of the Sith"
+        },
+        {
+          "id": "ZmlsbXM6MQ==",
+          "title": "A New Hope"
+        },
+        {
+          "id": "ZmlsbXM6Mg==",
+          "title": "The Empire Strikes Back"
+        },
+        {
+          "id": "ZmlsbXM6Mw==",
+          "title": "Return of the Jedi"
         }
       ],
       "planets": [
