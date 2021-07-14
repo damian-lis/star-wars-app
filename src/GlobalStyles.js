@@ -35,4 +35,16 @@ export default createGlobalStyle`
     outline-style:none;
     border: none;
   }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  table td,
+  table th {
+    padding: 20px 0px;
+    font-weight: 400;
+  }
 `;
