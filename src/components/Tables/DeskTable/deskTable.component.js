@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
+import PropTypes from 'prop-types';
 import IconDesc from 'assets/iconDesc.svg';
 import IconAsc from 'assets/iconAsc.svg';
 import IconDefault from 'assets/iconDefault.svg';
@@ -90,6 +91,10 @@ const DeskTableComponent = ({ planets }) => {
       </Table>
     </Wrapper>
   );
+};
+
+DeskTableComponent.propTypes = {
+  planets: PropTypes.array.isRequired,
 };
 
 export default DeskTableComponent;

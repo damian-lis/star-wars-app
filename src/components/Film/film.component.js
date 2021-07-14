@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { ListItem, TitleContainer, Title, TitleIcon } from './film.styles';
 import ArrowClose from 'assets/arrowClose.svg';
 import ArrowOpen from 'assets/arrowOpen.svg';
@@ -33,6 +34,14 @@ const FilmComponent = ({ title, id, data, MobTable, DeskTable }) => {
         ))}
     </ListItem>
   );
+};
+
+FilmComponent.propTypes = {
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  data: PropTypes.array.isRequired,
+  MobTable: PropTypes.func.isRequired,
+  DeskTable: PropTypes.func.isRequired,
 };
 
 export default FilmComponent;

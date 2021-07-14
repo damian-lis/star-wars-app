@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Table, Body, Row, BodyCell, CategoryWrapper } from './mobTable.styles';
 import { COLUMNS } from 'data/constants';
 
@@ -21,6 +22,10 @@ const MobTableComponent = ({ planets }) => {
       ))}
     </Table>
   );
+};
+
+MobTableComponent.propTypes = {
+  planets: PropTypes.array.isRequired,
 };
 
 export default MobTableComponent;
