@@ -1,10 +1,13 @@
-import Card from 'components/Card';
-import Logo from 'components/Logo';
-import FilmList from 'components/FilmList';
-import Film from 'components/Film';
-import Container from 'components/Container';
-import MobTable from 'components/Tables/MobTable';
-import DeskTable from 'components/Tables/DeskTable';
+import {
+  Card,
+  Container,
+  FilmList,
+  Film,
+  Logo,
+  DeskTable,
+  MobTable,
+} from 'components';
+
 import { data } from 'data/films.json';
 
 function App() {
