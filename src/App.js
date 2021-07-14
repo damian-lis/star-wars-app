@@ -1,28 +1,33 @@
+import Card from 'components/Card';
+import Logo from 'components/Logo';
+import FilmList from 'components/FilmList';
+import Film from 'components/Film';
 import Container from 'components/Container';
-import Title from 'components/Title';
-import List from 'components/List';
-import ListItem from 'components/ListItem';
+import MobTable from 'components/Tables/MobTable';
+import DeskTable from 'components/Tables/DeskTable';
 import { data } from 'data/films.json';
 
 function App() {
   const { films, planets } = data;
 
   return (
-    <div style={{ padding: 20, paddingTop: 70 }}>
-      <Container>
-        <Title main='Star Wars' sub='RECRUITMENT TASK' />
-        <List>
+    <Container>
+      <Card>
+        <Logo />
+        <FilmList>
           {films.map((film) => (
-            <ListItem
+            <Film
               key={film.id}
               id={film.id}
+              data={planets}
               title={film.title}
-              dataX={planets}
+              MobTable={MobTable}
+              DeskTable={DeskTable}
             />
           ))}
-        </List>
-      </Container>
-    </div>
+        </FilmList>
+      </Card>
+    </Container>
   );
 }
 
