@@ -20,7 +20,7 @@ import { COLUMNS } from 'data/constants';
 
 const DeskTableComponent = ({ planets }) => {
   const columns = useMemo(() => COLUMNS, []);
-  const data = useMemo(() => planets, []);
+  const data = useMemo(() => planets, [planets]);
 
   const tableInstance = useTable(
     {
