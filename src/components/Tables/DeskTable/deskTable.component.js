@@ -75,7 +75,6 @@ const DeskTableComponent = ({ planets }) => {
             return (
               <Row {...row.getRowProps()}>
                 {row.cells.map((cell) => {
-                  console.log(cell.render('Cell').props.value);
                   return (
                     <BodyCell {...cell.getCellProps()}>
                       {cell.render('Cell').props.value
