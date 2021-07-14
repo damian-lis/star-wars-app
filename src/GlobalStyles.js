@@ -12,7 +12,7 @@ export default createGlobalStyle`
   }
   
   body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Barlow', sans-serif;
   }
 
   ul{
