@@ -1,5 +1,5 @@
 import React from 'react';
-import { List } from './list.styles';
+import { List } from './filmList.styles';
 
 const ListComponent = ({ children }) => {
   return <List>{children}</List>;
