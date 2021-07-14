@@ -4,6 +4,7 @@ import { ListItem, TitleContainer, Title, TitleIcon } from './film.styles';
 import ArrowClose from 'assets/arrowClose.svg';
 import ArrowOpen from 'assets/arrowOpen.svg';
 import { useWindowWidth } from '@react-hook/window-size';
+import AnimateHeight from 'react-animate-height';
 
 const FilmComponent = ({ title, id, data, MobTable, DeskTable }) => {
   const [open, setOpen] = useState(false);
@@ -26,12 +27,13 @@ const FilmComponent = ({ title, id, data, MobTable, DeskTable }) => {
         <Title>{title}</Title>
         <TitleIcon src={open ? ArrowClose : ArrowOpen} />
       </TitleContainer>
-      {open &&
-        (isMobile ? (
+      <AnimateHeight duration={300} height={open ? 'auto' : 0}>
+        {isMobile ? (
           <MobTable planets={planetsModified} />
         ) : (
           <DeskTable planets={planetsModified} />
-        ))}
+        )}
+      </AnimateHeight>
     </ListItem>
   );
 };
