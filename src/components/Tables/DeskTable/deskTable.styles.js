@@ -7,7 +7,8 @@ export const Wrapper = styled.div`
 export const Row = styled.tr``;
 
 export const Head = styled.thead`
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid
+    ${({ theme: { colors } }) => colors.darkMedium && colors.darkMedium};
 `;
 
 export const HeadCell = styled.th`
@@ -49,8 +50,6 @@ export const CategoryIcon = styled.img`
 export const Table = styled.table`
   ${BodyCell}:first-child {
     text-align: left;
-    color: ${({ theme: { colors } }) =>
-      colors.light ? colors.light : 'black'};
   }
 
   ${HeadCell}:first-child {
@@ -63,7 +62,6 @@ export const Table = styled.table`
   }
 
   ${HeadCell}:first-child, ${BodyCell}:first-child {
-    color: ${({ theme: { colors } }) =>
-      colors.light ? colors.light : 'black'};
+    color: ${({ theme: { colors } }) => colors.turquoise && colors.turquoise};
   }
 `;

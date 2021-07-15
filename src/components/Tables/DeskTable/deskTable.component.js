@@ -1,9 +1,7 @@
 import React, { useMemo } from 'react';
 import { useTable, useSortBy } from 'react-table';
 import PropTypes from 'prop-types';
-import IconDesc from 'assets/iconDesc.svg';
-import IconAsc from 'assets/iconAsc.svg';
-import IconDefault from 'assets/iconDefault.svg';
+import { iconDesc, iconAsc, iconDefault } from 'assets';
 import {
   Wrapper,
   CategoryContainer,
@@ -19,7 +17,7 @@ import {
 } from './deskTable.styles';
 import { COLUMNS } from 'data/constants';
 
-const DeskTableComponent = ({ planets }) => {
+const DeskTableComponent = ({ planets, ...restProps }) => {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => planets, [planets]);
 
@@ -41,7 +39,7 @@ const DeskTableComponent = ({ planets }) => {
 
   return (
     <Wrapper>
-      <Table {...getTableProps()}>
+      <Table {...restProps} {...getTableProps()}>
         <Head>
           {headerGroups.map((headerGroup) => (
             <Row {...headerGroup.getHeaderGroupProps()}>
@@ -56,9 +54,9 @@ const DeskTableComponent = ({ planets }) => {
                         src={
                           column.isSorted
                             ? column.isSortedDesc
-                              ? IconDesc
-                              : IconAsc
-                            : IconDefault
+                              ? iconDesc
+                              : iconAsc
+                            : iconDefault
                         }
                       />
                     </CategoryIconContainer>

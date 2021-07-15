@@ -5,7 +5,7 @@ export const Image = styled.img`
   margin: 10px auto;
 
   @media (max-width: ${({ theme: { breakpoints } }) =>
-      breakpoints && breakpoints.mobile}) {
+      breakpoints.md && breakpoints.md}) {
     width: 200px;
   }
 `;

@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { ListItem, TitleContainer, Title, TitleIcon } from './film.styles';
-import ArrowClose from 'assets/arrowClose.svg';
-import ArrowOpen from 'assets/arrowOpen.svg';
 import { useWindowWidth } from '@react-hook/window-size';
 import AnimateHeight from 'react-animate-height';
+import { ListItem, TitleContainer, Title, TitleIcon } from './film.styles';
+import { arrowClose, arrowOpen } from 'assets';
 
-const FilmComponent = ({ title, id, data, MobTable, DeskTable }) => {
+const FilmComponent = ({
+  title,
+  id,
+  data,
+  MobTable,
+  DeskTable,
+  ...restProps
+}) => {
   const [open, setOpen] = useState(false);
   const isMobile = useWindowWidth() < 750;
 
@@ -22,10 +28,10 @@ const FilmComponent = ({ title, id, data, MobTable, DeskTable }) => {
   });
 
   return (
-    <ListItem>
+    <ListItem {...restProps}>
       <TitleContainer onClick={() => setOpen(!open)}>
         <Title>{title}</Title>
-        <TitleIcon src={open ? ArrowClose : ArrowOpen} />
+        <TitleIcon src={open ? arrowClose : arrowOpen} />
       </TitleContainer>
       <AnimateHeight duration={300} height={open ? 'auto' : 0}>
         {isMobile ? (

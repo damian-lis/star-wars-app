@@ -7,7 +7,6 @@ import {
   DeskTable,
   MobTable,
 } from 'components';
-
 import { data } from 'data/films.json';
 
 function App() {

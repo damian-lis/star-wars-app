@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image } from './logo.styles';
-import Logo from 'assets/LOGO.svg';
+import { logo } from 'assets';
 
-const LogoComponent = () => {
-  return <Image src={Logo} />;
+const LogoComponent = ({ ...restProps }) => {
+  return <Image src={logo} {...restProps} />;
 };
 
 export default LogoComponent;

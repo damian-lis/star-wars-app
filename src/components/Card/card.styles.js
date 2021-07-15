@@ -5,11 +5,11 @@ export const Container = styled.div`
   max-width: 790px;
   margin: 0 auto;
   padding: 25px 30px;
-  background-color: #e0e6ee;
+  background-color: ${({ theme: { colors } }) => colors.light && colors.light};
   border-radius: 8px;
 
   @media (max-width: ${({ theme: { breakpoints } }) =>
-      breakpoints && breakpoints.mobile}) {
+      breakpoints.md && breakpoints.md}) {
     padding: 15px;
   }
 `;

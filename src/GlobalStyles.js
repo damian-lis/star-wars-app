@@ -13,6 +13,7 @@ export default createGlobalStyle`
   
   body{
     font-family: 'Barlow', sans-serif;
+    color: ${({ theme: { colors } }) => colors.dark && colors.dark}
   }
 
   ul{

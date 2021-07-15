@@ -13,11 +13,11 @@ export const TitleContainer = styled.div`
   height: 48px;
   padding: 10px 18px;
   box-shadow: 0px 4px 12px rgba(224, 230, 238, 0.5);
-  color: ${({ theme: { colors } }) => (colors.light ? colors.light : 'black')};
+  color: ${({ theme: { colors } }) => colors.turquoise && colors.turquoise};
   cursor: pointer;
 
   @media (max-width: ${({ theme: { breakpoints } }) =>
-      breakpoints && breakpoints.mobile}) {
+      breakpoints.md && breakpoints.md}) {
     padding: 10px 10px;
   }
 `;

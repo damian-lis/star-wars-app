@@ -1,10 +1,13 @@
 export const theme = {
   colors: {
-    light: '#00687F',
+    turquoise: '#00687F',
+    light: '#E0E6EE',
+    lightMedium: '#E5E5E5',
+    darkMedium: '#C4C4C4',
     dark: '#474747',
   },
 
   breakpoints: {
-    mobile: '750px',
+    md: '750px',
   },
 };
