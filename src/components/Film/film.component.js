@@ -24,7 +24,7 @@ const FilmComponent = ({ title, id, data, MobTable, DeskTable, ...restProps }) =
         <Title>{title}</Title>
         <TitleIcon src={open ? arrowClose : arrowOpen} />
       </TitleContainer>
-      <AnimateHeight duration={300} height={open ? 'auto' : 0}>
+      <AnimateHeight duration={500} height={open ? 'auto' : 0}>
         {isMobile ? (
           <MobTable planets={planetsModified} />
         ) : (
