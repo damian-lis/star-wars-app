@@ -13,7 +13,7 @@ import {
   BodyCell,
   HeadCell,
   Row,
-  Body,
+  Body
 } from './deskTable.styles';
 import { COLUMNS } from 'data/constants';
 
@@ -24,39 +24,27 @@ const DeskTableComponent = ({ planets, ...restProps }) => {
   const tableInstance = useTable(
     {
       columns,
-      data,
+      data
     },
     useSortBy
   );
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = tableInstance;
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = tableInstance;
 
   return (
     <Wrapper>
       <Table {...restProps} {...getTableProps()}>
         <Head>
-          {headerGroups.map((headerGroup) => (
-            <Row {...headerGroup.getHeaderGroupProps()}>
+          {headerGroups.map((headerGroup, headerGroupIdx) => (
+            <Row key={headerGroupIdx} {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
-                <HeadCell
-                  {...column.getHeaderProps(column.getSortByToggleProps)}
-                >
+                <HeadCell key={column.id} {...column.getHeaderProps(column.getSortByToggleProps)}>
                   <CategoryContainer>
                     <CategoryWrapper>{column.render('Header')}</CategoryWrapper>
                     <CategoryIconContainer>
                       <CategoryIcon
                         src={
-                          column.isSorted
-                            ? column.isSortedDesc
-                              ? iconDesc
-                              : iconAsc
-                            : iconDefault
+                          column.isSorted ? (column.isSortedDesc ? iconDesc : iconAsc) : iconDefault
                         }
                       />
                     </CategoryIconContainer>
@@ -71,13 +59,11 @@ const DeskTableComponent = ({ planets, ...restProps }) => {
           {rows.map((row) => {
             prepareRow(row);
             return (
-              <Row {...row.getRowProps()}>
+              <Row key={row.original.id} {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <BodyCell {...cell.getCellProps()}>
-                      {cell.render('Cell').props.value
-                        ? cell.render('Cell')
-                        : 'unknown'}
+                    <BodyCell key={cell.column.Header} {...cell.getCellProps()}>
+                      {cell.render('Cell').props.value ? cell.render('Cell') : 'unknown'}
                     </BodyCell>
                   );
                 })}
@@ -91,7 +77,7 @@ const DeskTableComponent = ({ planets, ...restProps }) => {
 };
 
 DeskTableComponent.propTypes = {
-  planets: PropTypes.array.isRequired,
+  planets: PropTypes.array.isRequired
 };
 
 export default DeskTableComponent;

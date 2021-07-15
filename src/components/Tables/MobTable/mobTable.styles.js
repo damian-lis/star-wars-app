@@ -13,8 +13,7 @@ export const Body = styled.tbody`
 export const BodyCell = styled.td`
   padding: 20px 10px;
   width: 50%;
-  ${({ theme: { colors }, select }) =>
-    select && `color: ${colors.turquoise && colors.turquoise}`}
+  ${({ theme: { colors }, select }) => select && `color: ${colors.turquoise && colors.turquoise}`}
 `;
 
 export const CategoryWrapper = styled.div`

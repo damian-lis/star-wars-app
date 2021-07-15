@@ -8,8 +8,7 @@ export const Container = styled.div`
   background-color: ${({ theme: { colors } }) => colors.light && colors.light};
   border-radius: 8px;
 
-  @media (max-width: ${({ theme: { breakpoints } }) =>
-      breakpoints.md && breakpoints.md}) {
+  @media (max-width: ${({ theme: { breakpoints } }) => breakpoints.md && breakpoints.md}) {
     padding: 15px;
   }
 `;

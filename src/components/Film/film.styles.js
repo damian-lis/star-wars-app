@@ -16,8 +16,7 @@ export const TitleContainer = styled.div`
   color: ${({ theme: { colors } }) => colors.turquoise && colors.turquoise};
   cursor: pointer;
 
-  @media (max-width: ${({ theme: { breakpoints } }) =>
-      breakpoints.md && breakpoints.md}) {
+  @media (max-width: ${({ theme: { breakpoints } }) => breakpoints.md && breakpoints.md}) {
     padding: 10px 10px;
   }
 `;

@@ -7,8 +7,7 @@ export const Wrapper = styled.div`
 export const Row = styled.tr``;
 
 export const Head = styled.thead`
-  border-bottom: 1px solid
-    ${({ theme: { colors } }) => colors.darkMedium && colors.darkMedium};
+  border-bottom: 1px solid ${({ theme: { colors } }) => colors.darkMedium && colors.darkMedium};
 `;
 
 export const HeadCell = styled.th`

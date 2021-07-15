@@ -1,12 +1,4 @@
-import {
-  Card,
-  Container,
-  FilmList,
-  Film,
-  Logo,
-  DeskTable,
-  MobTable,
-} from 'components';
+import { Card, Container, FilmList, Film, Logo, DeskTable, MobTable } from 'components';
 import { data } from 'data/films.json';
 
 function App() {

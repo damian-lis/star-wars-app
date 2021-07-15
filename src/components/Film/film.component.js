@@ -5,25 +5,16 @@ import AnimateHeight from 'react-animate-height';
 import { ListItem, TitleContainer, Title, TitleIcon } from './film.styles';
 import { arrowClose, arrowOpen } from 'assets';
 
-const FilmComponent = ({
-  title,
-  id,
-  data,
-  MobTable,
-  DeskTable,
-  ...restProps
-}) => {
+const FilmComponent = ({ title, id, data, MobTable, DeskTable, ...restProps }) => {
   const [open, setOpen] = useState(false);
   const isMobile = useWindowWidth() < 750;
 
-  const planets = data.filter((item) =>
-    item.filmConnection.films.some((film) => film.id === id)
-  );
+  const planets = data.filter((item) => item.filmConnection.films.some((film) => film.id === id));
 
   const planetsModified = planets.map((planet) => {
     return {
       ...planet,
-      climates: planet.climates[0],
+      climates: planet.climates[0]
     };
   });
 
@@ -49,7 +40,7 @@ FilmComponent.propTypes = {
   id: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
   MobTable: PropTypes.func.isRequired,
-  DeskTable: PropTypes.func.isRequired,
+  DeskTable: PropTypes.func.isRequired
 };
 
 export default FilmComponent;

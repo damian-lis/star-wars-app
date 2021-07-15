@@ -7,9 +7,9 @@ const MobTableComponent = ({ planets, ...restProps }) => {
   return (
     <Table {...restProps}>
       {planets.map((planet, planetIndex) => (
-        <Body even={planetIndex % 2}>
+        <Body key={planet.id} even={planetIndex % 2}>
           {COLUMNS.map((col, colIndex) => (
-            <Row>
+            <Row key={col.Header}>
               <BodyCell>
                 <CategoryWrapper>{col.Header}</CategoryWrapper>
               </BodyCell>
@@ -25,7 +25,7 @@ const MobTableComponent = ({ planets, ...restProps }) => {
 };
 
 MobTableComponent.propTypes = {
-  planets: PropTypes.array.isRequired,
+  planets: PropTypes.array.isRequired
 };
 
 export default MobTableComponent;
