@@ -2,13 +2,11 @@
 
 The app displays information about planets that appear in 6 movies of the Star Wars series.
 
+Live version is available [here](https://star-wars-app-murex.vercel.app/).
+
 <br/>
 
 ![](public/images/intro.gif)
-
-<br/>
-
- Live version is available [here](https://star-wars-app-murex.vercel.app/).
 
 <br/>
 
